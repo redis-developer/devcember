@@ -51,7 +51,7 @@ Suze, Simon, Justin, Guy, Brian, and Steve are all designing an online boardgame
 
 [Enter your command or commands here]
 
-### Unfortunately, Simon had to leave the game to help someone on the Redis Discord Server. How would we go about removing Simon from the `game:prototype` list and ensure that Justin plays next?
+### Unfortunately, Simon had to leave the game to help someone on the [Redis Discord Server](https://discord.gg/redis). How would we go about removing Simon from the `game:prototype` list and ensure that Justin plays next?
 
 [Enter your command or commands here]
 
