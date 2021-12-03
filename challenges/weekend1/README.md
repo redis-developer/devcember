@@ -1,6 +1,6 @@
 # DEVcember Weekend 1 Challenge
 
-Lets practice our skills with the Redis List data type! You'll want to have your Redis Insight instance up and running with your Redis Cloud database connected in order to answer the challenge questions in this document.  
+Lets practice our skills with the Redis List data type! You'll want to have your RedisInsight instance up and running with your Redis Cloud database connected in order to answer the challenge questions in this document.  
 
 Clone this repository, create a branch named `weekend1:<YOUR GITHUB USERNAME>` and rename this README.md to `weekend1:<YOUR GITHUB USERNAME>.md`. Submit a pull request to the repository and your efforts will be added and reviewed by December 6th, 12:00pm PST.  Remember that there are many different solutions to a single problem, so don't be afraid to be as creative as you'd like. 
 
