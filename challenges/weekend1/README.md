@@ -2,7 +2,7 @@
 
 Lets practice our skills with the Redis List data type! You'll want to have your Redis Insight instance up and running with your Redis Cloud database connected in order to answer the challenge questions in this document.  
 
-Clone this repository, create a branch named `weekend1:<YOUR GITHUB USERNAME>` and rename this README.md to `weekend1:<YOUR GITHUB USERNAME>.md`. Submit a pull request to the repository and your efforts will be added and reviewed by [INSERT REASONABLE DEADLINE HERE].  Remember that there are many different solutions to a single problem, so don't be afraid to be as creative as you'd like. 
+Clone this repository, create a branch named `weekend1:<YOUR GITHUB USERNAME>` and rename this README.md to `weekend1:<YOUR GITHUB USERNAME>.md`. Submit a pull request to the repository and your efforts will be added and reviewed by December 6th, 12:00pm PST.  Remember that there are many different solutions to a single problem, so don't be afraid to be as creative as you'd like. 
 
 ### Weekend 1 Challenge Resources:
 - [Day 01](https://www.youtube.com/watch?v=jf-lwkWUQHg)
@@ -22,8 +22,7 @@ What command or commands are required to create the following List named `months
 [Enter your command or commands here]
 
 
-### 2. Accessing elements in a list
-What commands would you use to access the 3rd and 5th elements in the `months` list?
+### 2. What commands would you use to access the 3rd and 5th elements in the `months` list?
 
 [Enter your command or commands here]
 
@@ -43,19 +42,19 @@ What commands would you use to access the 3rd and 5th elements in the `months` l
 
 Suze, Simon, Justin, Guy, Brian, and Steve are all designing an online boardgame and want to keep track of the current player's turn using a circular list. Whoever is at index 0 of the circular list is the current player who should play their turn. They begin by making themselves players in a test game. 
 
-### How would you initialize a Circular List named `game:prototype` with the players Suze, Simon, Justin, Guy, Brian, and Steve?
+### 1. How would you initialize a Circular List named `game:prototype` with the players Suze, Simon, Justin, Guy, Brian, and Steve?
 
 [Enter your command or commands here]
 
-### Assume Suze took her turn and now it is Simon's turn to play. How would you reflect this state in the `game:prototype` list?
+### 2. Assume Suze took her turn and now it is Simon's turn to play. How would you reflect this state in the `game:prototype` list?
 
 [Enter your command or commands here]
 
-### Unfortunately, Simon had to leave the game to help someone on the Redis Discord Server. How would we go about removing Simon from the `game:prototype` list and ensure that Justin plays next?
+### 3. Unfortunately, Simon had to leave the game to help someone on the Redis Discord Server. How would we go about removing Simon from the `game:prototype` list and ensure that Justin plays next?
 
 [Enter your command or commands here]
 
-### A new player has entered the game! How would we go about entering Kyle into the `game:prototype` list? (Assume Justin has just played his turn so Guy, Brian, and Steve still have yet to play)
+### 4. A new player has entered the game! How would we go about entering Kyle into the `game:prototype` list? (Assume Justin has just played his turn so Guy, Brian, and Steve still have yet to play)
 
 [Enter your command or commands here]
 
