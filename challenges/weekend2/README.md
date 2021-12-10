@@ -1,5 +1,3 @@
-Try Redis-Om for Python https://github.com/redis/redis-om-python
-
 # DEVcember Weekend 2 Challenge
 
 Let's practice our skills with the Redis Sets, Bloom Filter, and Hyperlolglog data types! You'll want to have your RedisInsight instance up and running with your Redis Cloud database connected in order to answer the challenge questions in this document. 
