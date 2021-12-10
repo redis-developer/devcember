@@ -21,7 +21,7 @@ Clone this repository, create a branch named `weekend2:<YOUR GITHUB USERNAME>` a
 ### Weekend 2 Python code challenge
 In this week's challenge, you'll be working within the `weekend2.py` file.  Some initial code has been provided to get you started. You'll want to connect a Redis instance via environment variables. Note that your Redis instance *MUST* have the RedisBloom module in order to create and use Bloom Filters.
 
-1.  Within the python code you'll se a section creating random UUIDs. For this code challenge we'll use these UUIDs to populate the three different data structures. Feel free to use any other methodology you'd like.
+1.  Within the Python code you'll se a section creating random UUIDs. For this code challenge we'll use these UUIDs to populate the three different data structures. Feel free to use any other methodology you'd like.
 
 2. `weekend2.py` has a single command illustrating how to add a single member to the Set data structure. Implement code to add multiple members to the Set. You can use the provided UUID list or implement your own methods.
 
