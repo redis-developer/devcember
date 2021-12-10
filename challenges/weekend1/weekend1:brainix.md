@@ -19,7 +19,24 @@ What command or commands are required to create the following List named `months
 ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 ```
 
-`[Enter your command or commands here]`
+I've authored a library called [Pottery](https://github.com/brainix/pottery) for accessing Redis more Pythonically. Install it by creating/activating a virtual environment and using `pip3` like so:
+
+```zsh
+% ~/.pyenv/versions/3.10.1/bin/python3 -m venv venv   
+% source venv/bin/activate
+(venv) % pip3 install pottery
+```
+
+Then use Pottery's [`RedisList`](https://github.com/brainix/pottery#lists) container to create the list like so:
+
+```python
+>>> from pottery import RedisList
+>>> from redis import Redis
+>>> redis = Redis()
+>>> months = RedisList(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'], redis=redis, key='months')
+>>> months
+RedisList['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+```
 
 
 
@@ -27,7 +44,12 @@ What command or commands are required to create the following List named `months
 ### 2. Accessing elements in a list
  What commands would you use to access the 3rd and 5th elements in the `months` list?
 
-`[Enter your command or commands here]`
+```python
+>>> months[2]
+'March'
+>>> months[4]
+'May'
+```
 
 
 
@@ -35,7 +57,7 @@ What command or commands are required to create the following List named `months
 ### 3. In your own words
 What are some possible use cases not already covered for a Stack data structure in Redis? 
 
-`[Enter your answer here]`
+One use case for a Redis-backed stack is to maintain an undo history. Whenever a user performs an undoable action, append the action to the left of the stack. Then whenever the user clicks undo, pop the action from the left of the stack and undo it.
 
 
 
@@ -43,7 +65,7 @@ What are some possible use cases not already covered for a Stack data structure 
 ### 4. In your own words
 What are some possible use cases not already covered for a Queue data structure in Redis? 
 
-`[Enter your answer here]`
+One use case for a Redis-backed queue is to maintain a printer spooler. Whenever a new document comes in to be printed, add it to the rear of the queue. Whenever the printer finishes printing a document, pop the next document off of the front of the queue.
 
 
 
@@ -55,7 +77,14 @@ Suze, Simon, Justin, Guy, Brian, and Steve are all designing an online boardgame
 ### 1. Creating a Circular List
 How would you initialize a Circular List named `game:prototype` with the players Suze, Simon, Justin, Guy, Brian, and Steve?
 
-`[Enter your command or commands here]`
+```python
+>>> from pottery import RedisDeque
+>>> from redis import Redis
+>>> redis = Redis()
+>>> players = RedisDeque(['Suze', 'Simon', 'Justin', 'Guy', 'Brian', 'Steve'], redis=redis, key='game:prototype')
+>>> players
+RedisDeque(['Suze', 'Simon', 'Justin', 'Guy', 'Brian', 'Steve'])
+```
 
 
 
@@ -63,7 +92,11 @@ How would you initialize a Circular List named `game:prototype` with the players
 ### 2. Iterating a Circular List
 Assume Suze took her turn and now it is Simon's turn to play. How would you reflect this state in the `game:prototype` list?
 
-`[Enter your command or commands here]`
+```python
+>>> players.rotate(-1)
+>>> players
+RedisDeque(['Simon', 'Justin', 'Guy', 'Brian', 'Steve', 'Suze'])
+```
 
 
 
@@ -71,7 +104,12 @@ Assume Suze took her turn and now it is Simon's turn to play. How would you refl
 ### 3. Removing an element from a Circular List
 Unfortunately, Simon had to leave the game to help someone on the [Redis Discord Server](https://discord.gg/redis). How would we go about removing Simon from the `game:prototype` list and ensure that Justin plays next?
 
-`[Enter your command or commands here]`
+```python
+>>> players.popleft()
+'Simon'
+>>> players
+RedisDeque(['Justin', 'Guy', 'Brian', 'Steve', 'Suze'])
+```
 
 
 
@@ -79,8 +117,12 @@ Unfortunately, Simon had to leave the game to help someone on the [Redis Discord
 ### 4. Inserting a new element into a Circular List
 A new player has entered the game! How would we go about entering Kyle into the `game:prototype` list? (Assume Justin has just played his turn so Guy, Brian, and Steve still have yet to play)
 
-`[Enter your command or commands here]`
-
+```python
+>>> players.rotate(-1)
+>>> players.append('Kyle')
+>>> players
+RedisDeque(['Guy', 'Brian', 'Steve', 'Suze', 'Justin', 'Kyle'])
+```
 
 
 
