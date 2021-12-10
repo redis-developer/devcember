@@ -18,7 +18,7 @@ Clone this repository, create a branch named `weekend2:<YOUR GITHUB USERNAME>` a
 - [Redis Bloom Filter Explainer](https://youtu.be/Z9_wrhdbSC4)
 - [Redis Bloom Filter Documentation](https://oss.redis.com/redisbloom/Bloom_Commands/)
 
-### Weekend 2 python code challenge
+### Weekend 2 Python code challenge
 In this week's challenge, you'll be working within the `weekend2.py` file.  Some initial code has been provided to get you started. You'll want to connect a Redis instance via environment variables. Note that your Redis instance *MUST* have the RedisBloom module in order to create and use Bloom Filters.
 
 1.  Within the python code you'll se a section creating random UUIDs. For this code challenge we'll use these UUIDs to populate the three different data structures. Feel free to use any other methodology you'd like.
