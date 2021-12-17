@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Redis DEVcember weekend challenge",
   "main": "query_animals.js",
+  "type": "module",
   "scripts": {
     "load": "node load_animals.js",
     "query": "node query_animals.js"
