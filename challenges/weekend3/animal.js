@@ -11,7 +11,7 @@ const animalSchema = new Schema(Animal, {
   fee: { type: 'number' },
   children: { type: 'boolean' },
   otherAnimals: { type: 'boolean' },
-  description: { type: 'string' }
+  description: { type: 'string', textSearch: true }
 }, {
   dataStructure: 'HASH'
 });
