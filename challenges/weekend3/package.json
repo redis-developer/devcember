@@ -1,0 +1,27 @@
+{
+  "name": "animals",
+  "version": "1.0.0",
+  "description": "Redis DEVcember weekend challenge",
+  "main": "query_animals.js",
+  "scripts": {
+    "load": "node load_animals.js",
+    "query": "node query_animals.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redis-developer/devcember.git"
+  },
+  "author": "Redis Developer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redis-developer/devcember/issues"
+  },
+  "homepage": "https://github.com/redis-developer/devcember#readme",
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "csv-reader": "^1.0.8",
+    "redis-om": "^0.1.3"
+  }
+}
